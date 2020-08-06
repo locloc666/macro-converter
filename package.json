@@ -7,10 +7,10 @@
   "scripts": {
     "start": "run-p compile:* start:server",
     "start:server": "node ./server.js",
-    "compile:pug": "pug src/pug/ -o dist/ --pretty --watch --basedir src/pug",
+    "compile:pug": "pug src/pug/ -o docs/ --pretty --watch --basedir src/pug",
     "compile:stylus2cssprefix": "run-s compile:stylus2css compile:css2cssprefix",
     "compile:stylus2css": "stylus -w src/stylus/main.styl -o ./.temp/",
-    "compile:css2cssprefix": "postcss ./.temp/*.css -u autoprefixer -o ./dist/css/main.css --no-map -w"
+    "compile:css2cssprefix": "postcss ./.temp/*.css -u autoprefixer -o ./docs/css/main.css --no-map -w"
   },
   "keywords": [],
   "author": "",

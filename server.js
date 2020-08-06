@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 browserSync.init({
-    server: './dist/',
-    files: './dist/',
+    server: './docs/',
+    files: './docs/',
     // startPath: 'products/brand/tanpact/',
     browser: 'Google Chrome',
     rewriteRules: [
