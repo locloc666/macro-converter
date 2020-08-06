@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+html(lang="ja")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title マクロコンバーター
+		link(rel="stylesheet", href="css/main.css")
+	body
+		h1 XIV MACRO CONVERTER
+		#app
+			//- h2 オプション
+			.macroOptionForm
+				//- .macroOption
+					//- span 文頭に
+				ul.macroOption
+					//- li
+						label(for="radio-empty")
+							input#radio-empty(type="radio" value="" name="option" v-model="optionWatcher" checked)
+							span 名前などを消す
+					//- li
+						label(for="radio-party")
+							input#radio-party(type="radio" value="/p" name="option" v-model="optionWatcher")
+							span /p
+					li
+						label(for="insertText")
+							//- input#radio-other(type="radio" value="/echo" name="option" v-model="optionWatcher")
+							//- span
+							| 頭に
+							input#insertText(type="text" value="" v-model.trim="addText" placeholder="ここに接頭語を入力")
+							| をつける
+			.macroWrap
+				//- .separate
+				textarea#INPUT(v-model="textInput" name="" placeholder="ここにペースト")
+				//- .separate
+				#OUTPUT(style="white-space: pre-line;") {{ textOutput }}
+					//- #OUTPUT2(style="white-space: pre-line;") {{ textInput }}
+			//- button#copyBtn.cmnBtn 結果をコピー
+		script(src="js/vue.js")
+		script(src="js/main.js")

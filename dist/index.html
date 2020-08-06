@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>マクロコンバーター</title>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <h1>XIV MACRO CONVERTER</h1>
+    <div id="app">
+      <div class="macroOptionForm">
+        <ul class="macroOption">
+          <li>
+            <label for="insertText">頭に
+              <input id="insertText" type="text" value="" v-model.trim="addText" placeholder="ここに接頭語を入力"/>をつける
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="macroWrap">
+        <textarea id="INPUT" v-model="textInput" name="" placeholder="ここにペースト"></textarea>
+        <div id="OUTPUT" style="white-space: pre-line;">{{ textOutput }}</div>
+      </div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

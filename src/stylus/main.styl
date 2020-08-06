@@ -1,0 +1,113 @@
+/*!  main css  */
+
+// 変数など
+@import 'settings/*'
+aka = #cf0413
+kuro = #231815
+shiro = #fff
+
+//
+// MAIN!
+//
+
+body
+	// font-family monospace
+	margin 0
+	padding 0
+	// background #333
+	background linear-gradient(90deg,white 0%,white 50%,#eee 50%,#eee 100%)
+	text-align center
+textarea
+	appearance none
+	resize none
+	padding 0
+	border 0
+	outline none
+	background transparent
+
+h1
+	// border-bottom 1px solid
+	font-family serif
+	font-size 1.6em
+	letter-spacing .2em
+	margin 2em auto
+h2
+	font-size 1em
+
+.cmnBtn
+	padding .8em 2.4em
+	background-color #bbb
+	border-radius .5em
+	white-space nowrap
+#copyBtn
+	width 50%
+	max-width 320px
+
+.macroOptionForm
+	display inline-block
+.macroOption
+	display flex
+	justify-content center
+	align-items center
+	padding 0
+	margin 0
+	background #fff
+	overflow hidden
+	border-radius 1em
+	box-shadow 0 8px 24px 0 rgba(0,0,0,0.1)
+	font-size .9em
+	// border 1px solid #eee
+	input[type="text"]
+		box-sizing border-box
+		padding 0 .5em
+		background #eee
+		margin-right .25em
+		border-radius .2em
+		// border-bottom 1px solid #ddd
+	input[type="radio"]
+		margin-right .5em
+	label
+		display block
+		padding 1.2em 2em
+		cursor pointer
+		// &:hover
+		// 	background-color #eee
+		// 	input[type="text"]
+		// 		background #fff
+	li+li
+		border-left 1px solid #eee
+.macroWrap
+	display flex
+	margin-top 4em
+	margin-bottom 4em
+	max-width 1600px
+	margin-right auto
+	margin-left auto
+#INPUT
+#OUTPUT
+	font-size 1.2em
+	flex 1
+	font-family monospace
+	// letter-spacing .05em
+	text-align left
+	line-height 2
+	display block
+	width 50%
+	padding 0 4em
+	word-break break-all
+	// white-space pre
+	// letter-spacing .1em
+#INPUT
+	height auto
+	min-height 24.75em
+	// background #eee
+// .separate
+// 	text-align left
+// 	display block
+// 	width 50%
+// 	padding 1em
+// 	&>*
+// 		width 100%
+// 		background #fff
+// 		padding 4em
+// 		word-break all

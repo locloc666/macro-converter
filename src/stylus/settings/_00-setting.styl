@@ -1,0 +1,25 @@
+// settings
+
+SP_MAX = 768px
+PC_MIN = 769px
+
+sp(){
+  @media screen and (max-width: SP_MAX) {
+    {block}
+  }
+}
+pc(){
+  @media screen and (min-width: PC_MIN) {
+    {block}
+  }
+}
+bpMax(maxW){
+  @media screen and (max-width: maxW) {
+    {block}
+  }
+}
+bpMin(minW){
+  @media screen and (min-width: minW) {
+    {block}
+  }
+}

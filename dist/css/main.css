@@ -1,0 +1,385 @@
+/*  main css  */
+@charset "UTF-8";
+/*
+* ress.css • v1.0.1
+* MIT License
+* github.com/filipelinhares/ress
+*/
+html {
+  overflow-y: scroll;
+  box-sizing: border-box;
+/* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+/* iOS 8+ */
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+::before,
+::after {
+/* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+  text-decoration: inherit;
+}
+*:not(.video-js *) {
+/* Reset `padding` and `margin` of all elements */
+  margin: 0;
+/* Set `background-repeat: no-repeat` to all elements */
+  padding: 0;
+  background-repeat: no-repeat;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+hr {
+  overflow: visible;
+/* Show the overflow in Edge and IE */
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+small {
+  font-size: 80%;
+/* Set font-size to 80% in `small` elements */
+}
+[hidden],
+template {
+  display: none;
+/* Add the correct display in IE */
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+/* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+/* Remove text decoration in Firefox 40+ */
+}
+a {
+  background-color: transparent;
+/* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+/* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+}
+a:active,
+a:hover {
+  outline-width: 0;
+/* Remove the outline when hovering in all browsers */
+}
+b,
+strong {
+  font-weight: bolder;
+/* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+}
+dfn {
+  font-style: italic;
+/* Address styling not present in Safari and Chrome */
+}
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+input {
+  border-radius: 0;
+}
+[type="number"] {
+  width: auto;
+/* Firefox 36+ */
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+/* Safari 8+ */
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+/* Safari 8 */
+}
+textarea {
+  overflow: auto;
+/* Internet Explorer 11+ */
+  resize: vertical;
+/* Specify textarea resizability */
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+/* Specify font inheritance of form elements */
+}
+optgroup {
+  font-weight: bold;
+/* Restore the font weight unset by the previous rule. */
+}
+button {
+  overflow: visible;
+/* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: 0;
+}
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+/* Correct the inability to style clickable types in iOS */
+}
+button,
+select {
+  text-transform: none;
+/* Firefox 40+, Internet Explorer 11- */
+}
+button,
+input,
+select,
+textarea {
+  border-style: none;
+  background-color: transparent;
+  color: inherit;
+}
+select {
+  -moz-appearance: none;
+/* Firefox 36+ */
+  -webkit-appearance: none;
+/* Chrome 41+ */
+}
+select::-ms-expand {
+  display: none;
+/* Internet Explorer 11+ */
+}
+select::-ms-value {
+  color: currentColor;
+/* Internet Explorer 11+ */
+}
+legend {
+/* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+/* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  border: 0;
+/* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+/* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+/* Correct the text wrapping in Edge and IE */
+}
+::-webkit-file-upload-button {
+/* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  -webkit-appearance: button;
+/* Change font properties to `inherit` in Chrome and Safari */
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+[type="search"] {
+/* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+/* Correct the outline style in Safari */
+}
+img {
+  border-style: none;
+/* Remove border when inside `a` element in IE 8/9/10 */
+}
+progress {
+  vertical-align: baseline;
+}
+svg:not(:root) {
+  overflow: hidden;
+/* Internet Explorer 11- */
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+/* Internet Explorer 11+, Windows Phone 8.1+ */
+}
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+[aria-busy="true"] {
+  cursor: progress;
+}
+[aria-controls] {
+  cursor: pointer;
+}
+[aria-disabled] {
+  cursor: default;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+span,
+a {
+/*Androidブラウザフォントバグ対策*/
+  max-height: 999999px;
+  word-break: break-all;
+/*スマホで勝手に文字が大きくなる対策*/
+  -webkit-text-size-adjust: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #fff 0%, #fff 50%, #eee 50%, #eee 100%);
+  text-align: center;
+}
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  resize: none;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+h1 {
+  font-family: serif;
+  font-size: 1.6em;
+  letter-spacing: 0.2em;
+  margin: 2em auto;
+}
+h2 {
+  font-size: 1em;
+}
+.cmnBtn {
+  padding: 0.8em 2.4em;
+  background-color: #bbb;
+  border-radius: 0.5em;
+  white-space: nowrap;
+}
+#copyBtn {
+  width: 50%;
+  max-width: 320px;
+}
+.macroOptionForm {
+  display: inline-block;
+}
+.macroOption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 1em;
+  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.1);
+  font-size: 0.9em;
+}
+.macroOption input[type="text"] {
+  box-sizing: border-box;
+  padding: 0 0.5em;
+  background: #eee;
+  margin-right: 0.25em;
+  border-radius: 0.2em;
+}
+.macroOption input[type="radio"] {
+  margin-right: 0.5em;
+}
+.macroOption label {
+  display: block;
+  padding: 1.2em 2em;
+  cursor: pointer;
+}
+.macroOption li+li {
+  border-left: 1px solid #eee;
+}
+.macroWrap {
+  display: flex;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#INPUT,
+#OUTPUT {
+  font-size: 1.2em;
+  flex: 1;
+  font-family: monospace;
+  text-align: left;
+  line-height: 2;
+  display: block;
+  width: 50%;
+  padding: 0 4em;
+  word-break: break-all;
+}
+#INPUT {
+  height: auto;
+  min-height: 24.75em;
+}
