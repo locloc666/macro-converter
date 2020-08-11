@@ -1,18 +1,7 @@
-document.addEventListener("copy", function (e) {
-	var copied = window.getSelection().toString();
-	// console.log('copied');
-	alert("copied");
-});
-
-// const CCC = document.getElementById(copyBtn);
-// 取得したtextarea.select();
-// document.execCommand("copy");
-
-
 var app = new Vue({
 	el: "#app",
 	data: {
-		textInput: "(Loc Alh'ost) このように使います",
+		textInput: "(Loc Alh'ost) 左にペーストすると右に出るよ",
 		textOutput: "",
 		optionWatcher: '',
 		addText: ''
@@ -41,17 +30,9 @@ var app = new Vue({
 			while (i < tgt.length) {
 				let temp = tgt[i].replace(/^(\[.*\] )*?\(.*?\)/g, "");
 				tgtTF.push(option + " " + temp);
-				// if (!this.textInput) {
-				// 	tgtTF = [];
-				// }
 				i++;
 			}
-			// console.log(tgtTF);
 			this.textOutput = tgtTF.join("\r\n");
 		}
 	}
 });
-
-
-
-// ^(\[.*\] )*?\(.*?\) 
